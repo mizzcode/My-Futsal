@@ -12,7 +12,14 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+                sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+            },
+            boxShadow: {
+                'grey': '0 4px 4px 0px rgba(0, 0, 0, 0.25)',
+            },
+            colors: {
+                'my-red': '#B31312',
+                'black-46': 'rgba(0, 0, 0, 0.46)',
             },
         },
     },
