@@ -2,7 +2,7 @@
 
 @section('header')
     @include('components.navbar')
-    <img src="{{ asset('storage/rectangle.png') }}" alt="Rectangle">
+    <img src="{{ asset('storage/rectangle.png') }}" alt="Rectangle" class="w-full">
 @endsection
 
 @section('content')
