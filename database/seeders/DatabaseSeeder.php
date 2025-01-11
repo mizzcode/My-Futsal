@@ -48,18 +48,21 @@ class DatabaseSeeder extends Seeder
         $gorBulungan = Venue::create([
             'name' => 'Gor Bulungan',
             'image' => 'https://images-tm.tempo.co/all/2018/07/24/702902/702902_1200.jpg',
+            'city' => 'Jakarta',
             'sport_id' => $futsal->id,
         ]);
 
         $gorBulungan2 = Venue::create([
             'name' => 'Gor Bulungan',
             'image' => 'https://images-tm.tempo.co/all/2018/07/24/702902/702902_1200.jpg',
+            'city' => 'Bandung',
             'sport_id' => $basket->id,
         ]);
 
         $gorBulungan3 = Venue::create([
             'name' => 'Gor Bulungan',
             'image' => 'https://images-tm.tempo.co/all/2018/07/24/702902/702902_1200.jpg',
+            'city' => 'Surabaya',
             'sport_id' => $badminton->id,
         ]);
 
