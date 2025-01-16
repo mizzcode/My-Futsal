@@ -1,4 +1,4 @@
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
     <div class="grid grid-cols-4 my-14">
         <div class="col-span-1 mt-5">
             <h1 class="font-bold text-lg">COMPANY</h1>
