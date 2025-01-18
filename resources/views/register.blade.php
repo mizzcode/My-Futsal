@@ -18,6 +18,9 @@
                     @csrf
                     <div class="flex flex-col gap-y-2">
                         <input placeholder="Email Address" type="email" name="email" id="email" class="border font-semibold border-black rounded-md p-3" required>
+                        @if ($errors->has('email'))
+                            <span class="text-red-500">{{ $errors->first('email') }}</span>
+                        @endif
                     </div>
                     <button type="submit" class="bg-my-red text-white font-bold py-3 rounded-md">REGISTER</button>
                     <p>Sudah punya akun ? <a href="/auth/login" class="text-my-red underline font-semibold">Login disini</a></p>
