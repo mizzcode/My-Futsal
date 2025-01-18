@@ -14,11 +14,14 @@
                 <h1 class="text-my-red font-bold text-5xl">Kick into Action!</h1>
                 <p>Ribuan orang telah merasakan pengalaman seru berolahraga bersama kami. Sekarang Giliran kamu! </p>
                 <span class="text-my-red font-bold text-2xl">- MY FUTSAL</span>
-                <form action="" method="POST" class="flex flex-col gap-y-5">
+                <form action="{{ route('postLogin') }}" method="POST" class="flex flex-col gap-y-5">
                     @csrf
                     <div class="flex flex-col gap-y-2">
                         <input placeholder="Username" type="text" name="username" id="username" class="border font-semibold border-black rounded-md p-3" required>
                     </div>
+                    @if ($errors->has('err'))
+                            <span class="text-red-500">{{ $errors->first('err') }}</span>
+                        @endif
                     <div class="flex flex-col gap-y-2">
                         <input placeholder="Password" type="password" name="password" id="password" class="border font-semibold border-black rounded-md p-3" required>
                     </div>
