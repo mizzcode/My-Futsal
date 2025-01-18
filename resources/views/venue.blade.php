@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <h2 class="font-bold mt-12 mb-8 text-xl">BARU <span class="text-[#E72929]">DITAMBAHKAN</span></h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-10 2xl:gap-7">
             <div class="flex flex-col">

@@ -3,7 +3,7 @@
 @section('header')
     @include('components.navbar')
     <header class="bg-[#252525]">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-10">
             <div class="flex space-x-5 rounded-xl">
                 <div x-data="{ selectedCity: 'Semua Kota' }"
                     class="relative flex items-center justify-between space-x-2 w-[18.75rem] bg-white rounded-xl px-4 cursor-pointer">
