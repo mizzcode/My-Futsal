@@ -13,25 +13,31 @@
             <div class="flex justify-center gap-y-5 flex-col md:ms-8 2xl:ms-14">
                 <h1 class="text-my-red font-bold text-5xl">Check Your Inbox!</h1>
                 <p>Silakan cek email Anda untuk kode verifikasi yang telah kami kirim. Terima kasih!<br> <span
-                        class="text-my-red font-bold text-2xl flex"><img src="{{ asset('storage/line-1.png') }}" alt="Line 1" class="h-1 self-center me-2">MY FUTSAL</span>
+                        class="text-my-red font-bold text-2xl flex"><img src="{{ asset('storage/line-1.png') }}" alt="Line 1"
+                            class="h-1 self-center me-2">MY FUTSAL</span>
                 </p>
                 <p class="text-sm">Email anda sudah terdaftar ? <a href="{{ route('register') }}"
-                        class="text-my-red underline">Klik disini untuk melakukan registrasi kembali</a><br><img src="{{ asset('storage/line-2.png') }}" alt="Line 2" class="my-3"></p>
+                        class="text-my-red underline">Klik disini untuk melakukan registrasi kembali</a><br><img
+                        src="{{ asset('storage/line-2.png') }}" alt="Line 2" class="my-3"></p>
                 <form action="{{ route('verify-code') }}" method="POST" class="flex flex-col gap-y-5">
                     @csrf
                     <div class="flex flex-col gap-y-2">
                         <label class="text-sm text-[#686D76]">Kode Verifikasi Email :</label>
-                        <input placeholder="Verification Code" type="text" name="verification_code"
-                            id="verification_code" class="border font-semibold border-black rounded-md p-3" required>
+                        <input placeholder="Verification Code" type="number" name="verification_code"
+                            id="verification_code" class="border font-semibold border-black rounded-md p-3" required
+                            value="{{ old('verification_code') }}">
                     </div>
                     <div class="flex flex-col gap-y-2">
                         <label class="text-sm text-[#686D76]">Lengkapi Akun :</label>
-                        <input placeholder="Full Name" type="text" name="full_name" id="full_name"
-                            class="border font-semibold border-black rounded-md p-3" required>
+                        <input value="{{ old('full_name') }}" placeholder="Full Name" type="text" name="full_name"
+                            id="full_name" class="border font-semibold border-black rounded-md p-3" required>
                     </div>
                     <div class="flex flex-col gap-y-2">
-                        <input placeholder="Username" type="text" name="username" id="username"
-                            class="border font-semibold border-black rounded-md p-3" required>
+                        <input value="{{ old('username') }}" placeholder="Username" type="text" name="username"
+                            id="username" class="border font-semibold border-black rounded-md p-3" required>
+                        @if ($errors->has('username'))
+                            <span class="text-red-500">{{ $errors->first('username') }}</span>
+                        @endif
                     </div>
                     <div class="flex flex-col gap-y-2">
                         <input placeholder="Password" type="password" name="password" id="password"
@@ -46,19 +52,14 @@
                                 <span class="text-gray-700 text-sm py-3 font-bold">+62</span>
                             </div>
                             <!-- Input nomor telepon -->
-                            <input
-                                placeholder="0812-3456-7890"
-                                type="number"
-                                name="phone_number"
-                                id="phone_number"
-                                class="flex-1 p-3 text-sm font-semibold"
-                                required
-                            />
+                            <input value="{{ old('phone_number') }}" placeholder="0812-3456-7890" type="number"
+                                name="phone_number" id="phone_number" class="flex-1 p-3 text-sm font-semibold" required />
                         </div>
                     </div>
                     <button type="submit" class="bg-my-red text-white font-bold py-3 rounded-md">REGISTER</button>
                 </form>
-                <p class="text-sm">Tidak Menerima Kode Verifikasi ? <a href="#" class="text-my-red underline font-semibold">Klik disini untuk bantuan</a>
+                <p class="text-sm">Tidak Menerima Kode Verifikasi ? <a href="#"
+                        class="text-my-red underline font-semibold">Klik disini untuk bantuan</a>
                 </p>
             </div>
         </div>
