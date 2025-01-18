@@ -7,8 +7,8 @@ use App\Models\Schedule;
 use App\Models\Sports;
 use App\Models\User;
 use App\Models\Venue;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,17 +19,17 @@ class DatabaseSeeder extends Seeder
     {
         $user = User::create([
             'username' => 'mizz',
-            'password' => bcrypt('mizz'),
+            'password' => Hash::make('mizz'),
             'role' => 'member',
         ]);
         $user2 = User::create([
             'username' => 'mizz2',
-            'password' => bcrypt('mizz'),
+            'password' => Hash::make('mizz'),
             'role' => 'member',
         ]);
         $user3 = User::create([
             'username' => 'mizz3',
-            'password' => bcrypt('mizz'),
+            'password' => Hash::make('mizz'),
             'role' => 'member',
         ]);
 
