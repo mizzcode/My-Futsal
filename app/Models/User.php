@@ -20,7 +20,12 @@ class User extends Authenticatable
     protected $fillable = [
         'username',
         'password',
-        'role'
+        'role',
+        'verification_code',
+        'email',
+        'full_name',
+        'phone_number',
+        'email_verified_at',
     ];
 
     public function schedule()
