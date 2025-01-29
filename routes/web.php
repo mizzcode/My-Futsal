@@ -1,15 +1,15 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VenueController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/venue', function () {
-    return view('venue');
-})->name('venue');
+Route::get('/venue', [VenueController::class, 'index'])->name('venue');
+
+Route::get('/v/{slug}', [VenueController::class, 'detail'])->name('venue.detail');
 
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/register', [AuthController::class, 'showRegister'])->name('register');

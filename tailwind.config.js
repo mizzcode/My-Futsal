@@ -20,6 +20,8 @@ export default {
             colors: {
                 'my-red': '#B31312',
                 'black-46': 'rgba(0, 0, 0, 0.46)',
+                'grey-56': 'rgba(26, 23, 23, 0.56)',
+                'my-grey': '#D9D9D9',
             },
         },
     },
