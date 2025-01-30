@@ -15,7 +15,7 @@ class VenueController extends Controller
 
     public function detail($slug)
     {
-        $venue = Venue::where('slug', $slug)->with(['fields.schedules', 'sports'])->firstOrFail();
+        $venue = Venue::where('slug', $slug)->with(['fields.schedules', 'sports', 'galleries'])->firstOrFail();
 
         Log::info($venue);
 

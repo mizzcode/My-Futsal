@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Sports;
 use App\Models\Venue;
 use App\Models\Field;
+use App\Models\Gallery;
 use App\Models\Schedule;
 use App\Models\VenueSports;
 use Illuminate\Support\Str;
@@ -310,6 +311,38 @@ class DatabaseSeeder extends Seeder
                     'user_id' => $status === 'booked' ? 1 : null,
                 ]);
             }
+        }
+        $galleryImages = [
+            'gallery-inspire-arena-sulut.png',
+            'gallery-inspire-arena-sulut2.png',
+            'gallery-inspire-arena-sulut3.png'
+        ];
+        
+        foreach ($galleryImages as $image) {
+            Gallery::create([
+                'venue_id' => $inspireArenaSulut->id,
+                'image' => $image,
+            ]);
+            Gallery::create([
+                'venue_id' => $koramilArena04->id,
+                'image' => $image,
+            ]);
+            Gallery::create([
+                'venue_id' => $ckmSupportCenter->id,
+                'image' => $image,
+            ]);
+            Gallery::create([
+                'venue_id' => $jiepSportCenter->id,
+                'image' => $image,
+            ]);
+            Gallery::create([
+                'venue_id' => $soccerSereniaMansion->id,
+                'image' => $image,
+            ]);
+            Gallery::create([
+                'venue_id' => $jsFutsal->id,
+                'image' => $image,
+            ]);
         }
     }
 }

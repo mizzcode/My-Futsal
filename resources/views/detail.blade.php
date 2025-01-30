@@ -69,20 +69,169 @@
         </div>
 
         <div x-show="active === 'About'">
-            <h2 class="font-bold text-2xl my-5">About</h2>
-            
+            <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-y-5 2xl:grid-cols-4 gap-10 2xl:gap-7">
+                <div class="bg-my-grey rounded-xl py-6 px-10">
+                    <p class="text-my-red font-bold text-lg">Deskripsi :</p>
+                    <p class="text-my-red font-semibold mt-2">Asatu Area</p>
+                    <ul class="list-disc list-inside">
+                        <li>Tenants F&B Area</li>
+                        <li>Gym</li>
+                        <li>Mini Soccer</li>
+                    </ul>
+                    <p class="text-my-red font-semibold mt-2">Fasilitas</p>
+                    <ul class="list-disc list-inside">
+                        <li>Shower Room</li>
+                        <li>Parkiran +40 Mobil 20+ Motor</li>
+                    </ul>
+                </div>
+                <div class="bg-my-grey rounded-xl py-6 px-10">
+                    <p class="text-my-red font-bold mb-3 text-lg">Jam Operasional :</p>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span class="font-bold">Hari</span>
+                            <span class="font-bold me-9">Jam</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Senin</span>
+                            <span>06.00 - 00.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Selasa</span>
+                            <span>06.00 - 00.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Rabu</span>
+                            <span>06.00 - 00.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Kamis</span>
+                            <span>06.00 - 00.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Jumat</span>
+                            <span>06.00 - 00.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sabtu</span>
+                            <span>06.00 - 00.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Minggu</span>
+                            <span>06.00 - 00.00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-my-grey rounded-xl py-6 px-10">
+                    <p class="text-my-red font-bold text-lg">Fasilitas</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-6 gap-10 2xl:gap-7 mt-5">
+                        <div class="flex flex-col items-center">
+                            <img src="{{ asset('storage/shower.png') }}" alt="">
+                            <span>Shower</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="{{ asset('storage/wifi.png') }}" alt="">
+                            <span>Wifi</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="{{ asset('storage/mosque.png') }}" alt="">
+                            <span>Mushola</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="{{ asset('storage/locker.png') }}" alt="">
+                            <span>Locker</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="{{ asset('storage/parking.png') }}" alt="">
+                            <span>Parkir</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="{{ asset('storage/kantin.png') }}" alt="">
+                            <span>Kantin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-my-grey rounded-xl py-6 px-10">
+                    <p class="text-my-red font-bold text-lg">Informasi</p>
+                    <div class="flex items-center mt-5 gap-5">
+                        <img src="{{ asset('storage/instagram.png') }}" class="ms-1" alt="">
+                        <p>Instagram</p>
+                    </div>
+                    <div class="flex items-center mt-5 gap-4">
+                        <img src="{{ asset('storage/location.png') }}" alt="">
+                        <p>Asatu Area, Jl. RP. Soeroso No.1, Cikini, Menteng, Central Jakarta City, Jakarta 10330</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <div x-show="active === 'Rules'">
-            <h2 class="font-bold text-2xl my-5">Rules</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-y-5 2xl:grid-cols-4 gap-10 2xl:gap-7">
+                <div class="bg-my-grey rounded-xl py-6 px-10">
+                    <p class="text-my-red font-bold text-lg mb-3">Aturan Venue :</p>
+                    <p>- Pemesanan lapangan valid apabila sudah ada konfirmasi dari online booking system, dan harus
+                        ditunjukkan kepada staf Inspire Arena.</p>
+                    <p>- Pengguna lapangan yang walk-in tetap melakukan pemesanan dan pembayaran via sistem sebelum memasuki
+                        lapangan.</p>
+                    <p>- TIDAK ADA perpanjangan waktu untuk keterlambatan pengguna lapangan di jam reservasi.</p>
+                    <p>- TIDAK ADA kebijakan Refund dari pihak pengelola; Reschedule bisa dilakukan by request melalui
+                        sistem selambatnya H-5.</p>
+                    <p>- Peminjaman bola bisa dilakukan dengan menitipkan KTP atau SIM ke staf Inspire Arena.</p>
+                    <p>- Kunci kendaraan Anda di parkiran, dan tunjukkan karcis parkir ketika meninggalkan Inspire Arena.
+                    </p>
+                    <p>- Barang bawaan menjadi tanggung jawab masing-masing; segala bentuk kerusakan dan kehilangan di luar
+                        tanggung jawab Inspire Arena.</p>
+                    <p>- Jagalah kebersihan di seluruh area Inspire Arena dan buanglah sampah ke tempat sampah yang telah
+                        disediakan.</p>
+                    <p>- DILARANG merokok di semua area lapangan, foodcourt dll; merokok hanya diperbolehkan di area yang
+                        disediakan di taman belakang.</p>
+                    <p>- DILARANG membawa air mineral kemasan sekali pakai, kami menyediakan air minum isi ulang secara
+                        gratis untuk semua pengunjung.</p>
+                    <p>- DILARANG makan dan minum di dalam lapangan.</p>
+                    <p>- DILARANG membawa senjata tajam, minuman keras / alkohol maupun obat-obatan terlarang.</p>
+                </div>
+                <div class="bg-my-grey rounded-xl py-6 px-10">
+                    <p class="text-my-red font-bold text-lg mb-4 text-center">Protokol Kesehatan</p>
+                    <div class="flex mb-5">
+                        <div class="flex flex-col flex-1">
+                            <p class="text-my-red font-semibold">Batasan Jumlah Pemain :</p>
+                            <p>Jumlah pemain yang memasuki area lapangan dibatasi, dianjurkan tidak membawa keluarga atau
+                                teman.</p>
+                        </div>
+                        <div class="flex flex-col flex-1">
+                            <p class="text-my-red font-semibold">Suhu Tubuh :</p>
+                            <p>Wajib dalam keadaan sehat, suhu badan diatas 37.3℃  tidak di izinkan untuk memasuki area
+                                lapangan.
+                            <p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex flex-col flex-1">
+                            <p class="text-my-red font-semibold">Masker dan Cuci Tangan :</p>
+                            <p>Wajib menggunakan <span class="hidden sm:inline"><br></span>
+                                masker, dan mencuci <span class="hidden sm:inline"><br></span> tangan sebelum dan <span class="hidden sm:inline"><br></span> sesudah bermain.</p>
+                        </div>
+                        <div class="flex flex-col flex-1">
+                            <p class="text-my-red font-semibold">Suhu Tubuh :</p>
+                            <p>Wajib dalam keadaan sehat, suhu badan diatas 37.3℃  tidak di izinkan untuk memasuki area
+                                lapangan.
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div x-show="active === 'Gallery'">
-            <h2 class="font-bold text-2xl my-5">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-y-5 2xl:grid-cols-4 gap-10 2xl:gap-7">
+                @foreach ($venue->galleries as $gallery)
+                    <div class="flex flex-col flex-1">
+                        <img class="h-full object-cover rounded-lg" src="{{ asset('storage/' . $gallery->image) }}" alt="{{ $venue->name }}">
+                        <p class="font-semibold mt-1">{{ $venue->name }}</p>
+                    </div>
+                @endforeach
+            </div>
         </div>
-    </div>
-@endsection
+    @endsection
 
-@section('footer')
-    @include('components.footer')
-@endsection
+    @section('footer')
+        @include('components.footer')
+    @endsection

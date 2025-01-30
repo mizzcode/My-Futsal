@@ -36,4 +36,9 @@ class Venue extends Model
     {
         return $this->belongsToMany(Sports::class, 'venue_sports', 'venue_id', 'sport_id')->withTimestamps();
     }
+
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'venue_id');
+    }
 }
