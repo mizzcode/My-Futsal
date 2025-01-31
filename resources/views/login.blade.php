@@ -26,7 +26,7 @@
                         <input placeholder="Password" type="password" name="password" id="password" class="border font-semibold border-black rounded-md p-3" required>
                     </div>
                     <button type="submit" class="bg-my-red text-white font-bold py-3 rounded-md">LOGIN</button>
-                    <p>Kamu belum punya akun ? <a href="/auth/register" class="text-my-red underline font-semibold">Register disini</a></p>
+                    <p>Kamu belum punya akun ? <a href="{{ route('register') }}" class="text-my-red underline font-semibold">Register disini</a></p>
             </div>
         </div>
     </div>

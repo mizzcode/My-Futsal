@@ -23,7 +23,7 @@
                         @endif
                     </div>
                     <button type="submit" class="bg-my-red text-white font-bold py-3 rounded-md">REGISTER</button>
-                    <p>Sudah punya akun ? <a href="/auth/login" class="text-my-red underline font-semibold">Login disini</a></p>
+                    <p>Sudah punya akun ? <a href="{{ route('login') }}" class="text-my-red underline font-semibold">Login disini</a></p>
             </div>
         </div>
     </div>
