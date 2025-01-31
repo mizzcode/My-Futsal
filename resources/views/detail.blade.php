@@ -207,7 +207,8 @@
                         <div class="flex flex-col flex-1">
                             <p class="text-my-red font-semibold">Masker dan Cuci Tangan :</p>
                             <p>Wajib menggunakan <span class="hidden sm:inline"><br></span>
-                                masker, dan mencuci <span class="hidden sm:inline"><br></span> tangan sebelum dan <span class="hidden sm:inline"><br></span> sesudah bermain.</p>
+                                masker, dan mencuci <span class="hidden sm:inline"><br></span> tangan sebelum dan <span
+                                    class="hidden sm:inline"><br></span> sesudah bermain.</p>
                         </div>
                         <div class="flex flex-col flex-1">
                             <p class="text-my-red font-semibold">Suhu Tubuh :</p>
@@ -224,7 +225,8 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-y-5 2xl:grid-cols-4 gap-10 2xl:gap-7">
                 @foreach ($venue->galleries as $gallery)
                     <div class="flex flex-col flex-1">
-                        <img class="h-full object-cover rounded-lg" src="{{ asset('storage/' . $gallery->image) }}" alt="{{ $venue->name }}">
+                        <img class="h-full object-cover rounded-lg" src="{{ asset('storage/' . $gallery->image) }}"
+                            alt="{{ $venue->name }}">
                         <p class="font-semibold mt-1">{{ $venue->name }}</p>
                     </div>
                 @endforeach
