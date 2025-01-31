@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" x-data="{ active: 'Lapangan' }">
+    <div class="mx-auto max-w-6xl" x-data="{ active: 'Lapangan' }">
         <div class="relative">
             <img src="{{ asset('storage/' . $venue->large_image) }}" class="mt-6" alt="{{ $venue->large_image }}">
             <img src="{{ asset('storage/' . $venue->logo_image) }}" class="absolute bottom-3 left-10 m-4 w-24"
@@ -59,9 +59,10 @@
                                 Rp {{ number_format($minPrice, 0, ',', '.') }} ~ Rp
                                 {{ number_format($maxPrice, 0, ',', '.') }}
                             </p>
-                            <button
-                                class="bg-my-red shadow-xl font-bold ms-2 w-[18.75rem] rounded-xl text-white py-3 px-5">Lihat
-                                Jadwal</button>
+                            <a href="{{ route('field.detail', ['id' => $field->id]) }}">
+                                <button
+                                    class="bg-my-red shadow-xl font-bold ms-2 w-[18.75rem] rounded-xl text-white py-3 px-5">Lihat Jadwal</button>
+                            </a>
                         </div>
                     </div>
                 @endforeach
