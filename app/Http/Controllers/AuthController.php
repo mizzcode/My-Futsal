@@ -59,13 +59,6 @@ class AuthController extends Controller
 
     public function verifyCode(Request $request)
     {
-        
-        if (User::query()->where('username', $request->username)->first()) {
-            return redirect()->back()->withErrors(['username' => 'Username already taken.']);
-        }
-        
-        $email = $request->session()->get('email');
-
         $request->validate([
             'verification_code' => 'required|numeric',
             'username' => 'required|string|max:50',
@@ -73,6 +66,12 @@ class AuthController extends Controller
             'password' => 'required|string|max:50',
             'phone_number' => 'required|string|max:15',
         ]);
+        
+        if (User::query()->where('username', $request->username)->first()) {
+            return redirect()->back()->withErrors(['username' => 'Username already taken.']);
+        }
+        
+        $email = $request->session()->get('email');
 
         $user = User::query()->where('email', $email)
                     ->where('verification_code', $request->verification_code)
