@@ -37,7 +37,7 @@
     <div class="flex items-center justify-between">
         <div class="flex flex-col">
             <h1 class="font-bold text-lg">PT. YUNTA MANDIRI GROUP</h1>
-            <p class="text-black-46 font-semibold mt-3">&copy; 2024 MY FUTSAL All Right Reserved <span class="px-5"><a
+            <p class="text-black-46 font-semibold mt-3">&copy; 2025 MY FUTSAL All Right Reserved <span class="px-5"><a
                         href="#">Privacy Policy</a></span><span><a href="#">Legal</a></span></p>
         </div>
         <div class="flex flex-col">
