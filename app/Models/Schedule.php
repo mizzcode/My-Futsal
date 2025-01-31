@@ -18,7 +18,7 @@ class Schedule extends Model
 
     public function field()
     {
-        return $this->hasMany(Field::class, 'field_id');
+        return $this->belongsTo(Field::class);
     }
 
     public function user()

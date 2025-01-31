@@ -12,8 +12,8 @@ class Sports extends Model
         'name',
     ];
 
-    public function venue()
+    public function venues()
     {
-        return $this->belongsTo(Venue::class);
+        return $this->belongsToMany(Venue::class, 'venue_sports', 'sport_id', 'venue_id')->withTimestamps();
     }
 }

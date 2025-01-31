@@ -14,9 +14,9 @@ class Field extends Model
         'venue_id',
     ];
 
-    public function schedule()
+    public function schedules()
     {
-        return $this->belongsTo(Schedule::class);
+        return $this->hasMany(Schedule::class, 'field_id');
     }
 
     public function venue()
